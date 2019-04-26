@@ -386,7 +386,6 @@ def _intent_handler(handler_input):
         if(len(subreddit_rss.entries) == 0): raise TypeError
 
         counter = 0
-        print(len(subreddit_rss.entries))
         for entry in subreddit_rss.entries:
             
             if(entry.title[-1] != '.' and entry.title[-1] != '?'): entry.title = entry.title + "."
